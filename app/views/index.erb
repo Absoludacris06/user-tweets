@@ -1,15 +1,12 @@
 <div class="container">
   <h1>TwitScrape</h1>
-  <% unless @user.nil? %>
-    <h3><%= @user.username %>'s last 10 tweets:</h3>
-    <% @tweets.each do |tweet| %>
-      <%= tweet.text %>
-    <% end %>
-  <% end %>
-      <p>Type username in URL bar up top</p>
-<!--     <input type="text" name="username">
-    <form method="get" action="/">
-    </form> -->
-
-
+    <div id="loading" style="display: none;">
+      <img src="/ajax-loader.gif">
+    </div>
+    <div id="tweet_list">
+    </div>
+    <form method="post" action="/loading" id="user_form">
+      <input type="text" name="username" placeholder="Enter a username" />
+      <input type="submit" value="Get Tweets" />
+    </form> 
 </div>

@@ -26,11 +26,6 @@ APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 
 APP_NAME = APP_ROOT.basename.to_s
 
-# TWITTER_CONSUMER_KEY = "gPgcw1pvo3ldLzicuhtFZg"
-# TWITTER_CONSUMER_SECRET = "tIWAe7gTM6CNy2dOpm9h06lqUyDquNpCcHJNaTl3k"
-# TWITTER_ACCESS_TOKEN = "1183738682-wKZU3MfXkpu7QftCKRjpF8K90LxvlchJuxedonW"
-# TWITTER_ACCESS_TOKEN_SECRET = "ExUvUwFPKT1D1pMD31k6hXrKJzcJnR37VaEmg38Gj7Q"
-
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
